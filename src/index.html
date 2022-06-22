@@ -18,6 +18,10 @@
 </head>
 
 <body>
+  <!--CSS Spinner-->
+  <div class="spinner-wrapper">
+    <div class="spinner"></div>
+  </div>
   <app-root></app-root>
 
   <!-- jQuery -->
@@ -32,7 +36,17 @@
   <script src="../assets/js/waypoints.min.js"></script>
   <script src="../assets/js/jquery.counterup.min.js"></script>
   <script src="../assets/js/imgfix.min.js"></script>
-
+  <script>
+    $(document).ready(function () {
+      //Preloader
+      preloaderFadeOutTime = 3000;
+      function hidePreloader() {
+        var preloader = $('.spinner-wrapper');
+        preloader.fadeOut(preloaderFadeOutTime);
+      }
+      hidePreloader();
+    });
+  </script>
   <!-- Global Init -->
   <script src="../assets/js/custom.js"></script>
 </body>
